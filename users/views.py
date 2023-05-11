@@ -1,9 +1,7 @@
 from django.shortcuts import render
-from django.template import loader
 from django.http import HttpResponse
-
-# Create your views here.
+from django.template import loader
 
 def users(request):
-    template = loader.get_template('./html/template.html')
-    return HttpResponse(template.render())
+  template = loader.get_template('html/index.html')
+  return HttpResponse(template.render())
